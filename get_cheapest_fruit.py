@@ -11,11 +11,15 @@ def get_cheapest_fruit(data: str) -> str:
     f=open(data)
     f=reader(f)
     a=[]
-    b=[]
+    b=-1
+    n=0
+    s=0
     for i in f:
-        a.append(i[1])
-    a=a[1:]
-    for i in a:
-        b.append(float (i))
-    return max(b)
+        a.append(i)
+    for i in a[1:]:
+        n=float(i[1])
+        if n>b:
+            b=n
+            s=i
+    return s[0]
 print(get_cheapest_fruit("fruits.csv"))
