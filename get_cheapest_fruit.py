@@ -19,7 +19,7 @@ def get_cheapest_fruit(data: str) -> str:
     for i in a[1:]:
         n=float(i[1])
         if n>b:
-            b=n
             s=i
+            b=n
     return s[0]
 print(get_cheapest_fruit("fruits.csv"))
