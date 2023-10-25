@@ -19,6 +19,6 @@ def get_cheapest_fruit_id(data: str) -> int:
         n=float(i[1])
         if n<b:
             b=n
-            s=i
-    return s[0]
+        s+=1
+    return s
 print(get_cheapest_fruit_id("fruits.csv") )
