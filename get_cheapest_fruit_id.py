@@ -11,7 +11,7 @@ def get_cheapest_fruit_id(data: str) -> int:
     f=open(data)
     f=reader(f)
     a=[]
-    b=1000000000
+    b=10000000
     s=0
     for i in f:
         a.append(i)
