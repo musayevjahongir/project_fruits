@@ -7,7 +7,21 @@ def get_expensive_fruit(data: str) -> str:
     returns:
         str: name of the most expensive fruit
     """
-    # your code here
-    return  
+    from csv import reader
+    f=open(data)
+    f=reader(f)
+    a=[]
+    b=-1
+    n=0
+    s=0
+    for i in f:
+        a.append(i)
+    for i in a[1:]:
+        n=float(i[1])
+        if n>b:
+            b=n
+            s=i
+    return s[0]
+print(get_expensive_fruit("fruits.csv"))
 
 
